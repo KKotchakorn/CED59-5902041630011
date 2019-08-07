@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <script language ="JavaScript">
+        function checkINFO()
+            {
+                FirstName = document.frmRegister.txt_fname.value;
+                if(FirstName.length == "")
+                {
+                    alert("Enter Firstname");
+                    return false;
+                }
+                LastName = document.frmRegister.txt_lname.value;
+                if(LastName.length == "")
+                {
+                    alert("Enter Lastname");
+                    return false;
+                }
+                Email = document.frmRegister.txt_email.value;
+                if(Email.length == "")
+                {
+                    alert("Enter E-mail");
+                    return false;
+                }
+                var user = "pattie";
+                UserName = document.frmRegister.txt_user.value;
+                if(UserName.length == "")
+                {
+                    alert("Enter Username");
+                    return false;
+                }
+                if(UserName.length == user.length)
+                {
+                    alert("This have username in database.");
+                    return false;
+                }
+                PassWord = document.frmRegister.txt_pwd.value;
+                if(PassWord.length < 8)
+                {
+                    alert("Enter password at least 8 characters.");
+                    return false;
+                }
+            }
+    </script>
+
+</head>
+<body bgcolor="pink">
+<center>
+    <table  border="0" width="500px" >
+        <form name="frmRegister" method="post" action="/" onsubmit="return checkINFO()">
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <h1>Register</h1>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h4>Firstname : </h4>
+                    </td>
+                    <td>
+                        <input type="text" name="txt_fname" size="40" placeholder="Firstname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Lastname : </h4>
+                    </td>
+                    <td>
+                        <input type="text" name="txt_lname" size="40" placeholder="Lastname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>E-mail :</h4>
+                    </td>
+                    <td>
+                        <input type="email" name="txt_email" size="40" placeholder="E-mail">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Username : </h4>
+                    </td>
+                    <td>
+                        <input type="text" name="txt_user" size="40" placeholder="Username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Password : </h4>
+                    </td>
+                    <td>
+                        <input type="password" name="txt_pwd" size="40" placeholder="Password">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" name="submit" size="40" value="Register"></td>
+                </tr>
+
+        </form>
+    </table>
+</center>
+</body>
+</html>
