@@ -29,6 +29,10 @@ class ContactFormTest extends \Codeception\Test\Unit
         expect($emailMessage->getFrom())->hasKey('noreply@example.com');
         expect($emailMessage->getReplyTo())->hasKey('tester@example.com');
         expect($emailMessage->getSubject())->equals('very important letter subject');
+<<<<<<< HEAD
         expect($emailMessage->toString())->stringContainsString('body of current message');
+=======
+        expect($emailMessage->toString())->contains('body of current message');
+>>>>>>> 210f1c2c4cf6be7c2b6accc4af9a021bc45447c7
     }
 }

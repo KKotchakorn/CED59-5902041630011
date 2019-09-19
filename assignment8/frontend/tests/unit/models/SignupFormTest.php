@@ -48,7 +48,11 @@ class SignupFormTest extends \Codeception\Test\Unit
         expect($mail->getTo())->hasKey('some_email@example.com');
         expect($mail->getFrom())->hasKey(\Yii::$app->params['supportEmail']);
         expect($mail->getSubject())->equals('Account registration at ' . \Yii::$app->name);
+<<<<<<< HEAD
         expect($mail->toString())->stringContainsString($user->verification_token);
+=======
+        expect($mail->toString())->contains($user->verification_token);
+>>>>>>> 210f1c2c4cf6be7c2b6accc4af9a021bc45447c7
     }
 
     public function testNotCorrectSignup()
